@@ -50,6 +50,12 @@ img {
     display: block;
 }
 
+[class$="__container"] {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
 .container {
     max-width: 120rem;
     margin: 0 auto;
@@ -133,6 +139,22 @@ img {
 
 }
 
+.header__btn {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 1rem 2rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .header__btn {
+        display: inline-block;
+    }
+
+}
+
 .header__heading {
     text-align: center;
     font-size: 3rem;
@@ -147,7 +169,6 @@ img {
     }
 
 }
-
 
 .nav {
     display: flex;
@@ -173,4 +194,239 @@ img {
         color: var(--white);
     }
 
+}
+
+/* seccion principal */
+
+/* .nucleus {
+    margin-top: 1rem;
+} */
+
+.nucleus__heading {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.nucleus__grid {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+    .nucleus__grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 5rem;
+        align-items: center;
+    }
+}
+
+.list__element {
+    background-color: var(--white);
+    box-shadow: 0px 0px 10px 3px rgb(0 0 0 / .30);
+    padding: 2rem;
+    margin-bottom: 5rem;
+    transition-property: transform;
+    transition-duration: .3s;
+}
+
+
+.list__element:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.list__heading {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin: 0;
+}
+
+.list__text {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.list__number {
+    font-size: 6rem;
+    color: var(--primary);
+    margin: 0;
+    font-weight: 900;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .list__number {
+        flex-basis: 20rem;
+        text-align: right;
+        font-size: 4rem;
+    }
+
+}
+
+.security {
+    background-color: var(--primary);
+    padding: 20rem 0;
+    position: relative;
+    margin: 10rem 0;
+    overflow: hidden;
+}
+
+
+.security::after,
+.security::before {
+    content: '';
+    height: 20rem;
+    width: 120%;
+    background-color: var(--white);
+    position: absolute;
+}
+
+.security::before {
+    top: -10rem;
+    left: 0;
+    transform: rotate(-3deg);
+}
+
+.security::after {
+    bottom: -10rem;
+    right: 0;
+    transform: rotate(3deg);
+}
+
+
+.security__heading {
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+    .security__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        align-items: center;
+    }
+}
+
+.commissions__heading {
+    text-align: center;
+    font-size: 5rem;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .commissions__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        align-items: center;
+    }
+}
+
+
+.commissions__text {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .commissions__text {
+        text-align: left;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .list__element--2col {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 2rem;
+    }
+}
+
+.testimonials {
+    background-color: var(--primary);
+    padding: 5rem 0;
+}
+
+.testimonials__heading {
+    text-align: center;
+    font-size: 5rem;
+    color: var(--white);
+}
+
+.testimonials__grid {
+    display: grid;
+    gap: 4rem;
+}
+
+@media (min-width: 768px) {
+    .testimonials__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+.testimonial {
+    box-shadow: 0 0 15px 3 px rgb(0 0 0 / .30);
+    background-color: var(--white);
+    padding: 2rem;
+    position: relative;
+}
+
+.testimonial__text {
+    padding-left: 4rem;
+}
+
+.testimonial__text::before {
+    content: '';
+    background-image: url(../img/comilla.png);
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 3;
+    left: 30px;
+}
+
+.testimonial__author {
+    color: var(--primary);
+    font-weight: 700;
+    text-align: right;
+}
+
+.footer {
+    background-color: #5A30A0;
+    padding: 3rem 0;
+}
+
+.footer_logo {
+    width: 15rem;
+    margin: 0 auto 3rem auto;
+}
+
+@media (min-width: 768px) {
+    .footer__logo {
+        margin: 0;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .footer__grid {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+}
+
+.nav__link--white {
+    color: var(--white);
 }
